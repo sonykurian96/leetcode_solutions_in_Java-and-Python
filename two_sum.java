@@ -1,3 +1,24 @@
+// slower but easy to understand
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        int[] result = new int[2];
+        
+        for(int outside=0; outside<nums.length; outside++){
+            for(int inside=0;inside<nums.length - 1;inside++){
+                if(nums[outside]+nums[inside + 1] == target){
+                    if(outside != inside + 1){
+                     result[0] = outside;
+                    result[1] = inside + 1;
+                    }
+                }
+            }
+        } 
+    return result;
+    }
+}
+
+// faster
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
